@@ -1,0 +1,45 @@
+.create_post_box{
+    /* border: 2px solid red; */
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create_post_box_avatar{
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar_container{
+    border: 2px solid white;
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;   
+}
+.create_post_box_search{
+    /* border: 2px solid greenyellow; */
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create_post_mini_box{
+    /* border: 2px solid blue; */
+    width: 90%;
+    height: 45%;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 2rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 2rem;
+    color: whitesmoke;
+    cursor: pointer;
+}

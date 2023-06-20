@@ -1,0 +1,15 @@
+.CreatePost_Container_Icons_box{
+    /* border: 2px solid white; */
+    height: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* 
+.photo-icon:hover::before{
+    content: "photo";
+    position: relative;
+    background-color: red;
+    border: 2px solid black;
+    font-size: 2px;
+} */

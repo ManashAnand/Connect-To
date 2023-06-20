@@ -1,0 +1,87 @@
+.Chat_Main_Container{
+    /* border: 2px solid red; */
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CHat_Main_Box{
+    
+    border: 2px solid orange;
+    width: 80%;
+    height: 90%;
+    border-radius: 0px 0px 12px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chat_Container{
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 90%;
+}
+.input_btn_container{
+    /* border: 2px solid whitesmoke; */
+    width: 100%;
+    height: 10%;
+    border-radius:0 0 12px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_btn_container > input{
+    border: 2px solid ;
+    width: 85%;
+    height: 100%;
+    border-radius: 0 0 0 12px;
+    color: whitesmoke;
+    font-size: 1.12rem;
+}
+
+.sendBtn{
+    border: 2px solid whitesmoke;
+    height: 100%;
+    width: 15%;
+    border-radius: 0 0 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.12rem;
+    color: white;
+    cursor: pointer;
+}
+.sendBtn:active{
+    transform: scale(0.97);
+    background-color: blue;
+}
+.otherPerson{
+    /* border: 2px solid white; */
+    /* width: 5%; */
+    display: flex;
+    gap: 1rem;
+}
+.firstPerson{
+    /* border: 2px solid white; */
+    display: flex;
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+.otherPersonPhoto{
+    border: 2px solid red;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherPersonMsg{
+    border: 2px solid blue;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    padding: 1rem;
+}
