@@ -1,5 +1,7 @@
 const fs = require('fs');
 const postModal = require('../models/postModal');
+const UserModel = require('../models/userModal');
+const { v4: uuidv4 } = require('uuid');
 
 
 const posthandler = async (req,res) => {
@@ -61,4 +63,22 @@ const incLike = async (req,res) => {
     }
 }
 
-module.exports = { posthandler,getAllPost,incLike }
+const setCall = async (req,res) => {
+    //  console.log(req.body);
+    // console.log(callerId+ " " +reciverId)
+    const {myId,anotherPersonId} = req.body;
+    try {
+        // console.log(myId+" "+anotherPersonId)
+        // console.log("random uuid is "+uuidv4());
+        const roomIdanother = await UserModel.findByIdAndUpdate({"_id":anotherPersonId},{
+            videoUid:uuidv4()
+        });
+        console.log(roomIdanother)
+        res.json(roomIdanother)
+        
+    } catch (error) {
+        // console.log(error)
+    }
+}
+
+module.exports = { posthandler,getAllPost,incLike,setCall }

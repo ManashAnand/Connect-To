@@ -11,6 +11,8 @@ import MainProfile from './OtherComponent/MainProfile'
 import PostForm from './OtherComponent/Post/PostForm'
 
 import Chat from './ChatComponent/Chat'
+import Call from './OtherComponent/Calls/Call'
+import Room from './OtherComponent/Calls/Room'
 
 
 function App() {
@@ -23,9 +25,12 @@ function App() {
       <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/call' element={<Call/>}/>
       <Route path='/profile/:id' element={<MainProfile/>}/>
       <Route path='/create-post' element={<PostForm/>}/>
       <Route path="/chat/:id" element={<Chat/>}/>
+
+      <Route path='/room/:videoUid' element={<Room/>}/>
 
 
       {/* Login signin route */}

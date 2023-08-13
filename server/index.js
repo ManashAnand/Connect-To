@@ -5,46 +5,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 
 const http = require('http');
-const socketIO = require('socket.io');
 
-
-const server = http.createServer(app);
-const io = socketIO(server, {
-  cors: {
-    origin: "*"
-  }
-});
-
-// const connectedUsers = new Map();
-
-io.on("connection",(socket) => {
-
-    // socket.on('userConnected', (userId) => {
-    //     connectedUsers.set(userId, socket.id);
-        console.log("connected with "+ socket.id)
-    //   });
-
-    socket.on('send-message',(message,room) => {
-        console.log(message);
-        
-
-        // const connectRoom = connectedUsers.get(room);
-        if(room === "") socket.broadcast.emit('recieve-message',"There is no one with this name");
-        else {
-            socket.on('recieve-message', message => console.log(message));
-        }
-        
-    })
-
-    // socket.on('disconnect', () => {
-    //     connectedUsers.forEach((value, key) => {
-    //       if (value === socket.id) {
-    //         connectedUsers.delete(key);
-    //         // break;
-    //       }
-    //     });
-    //   });
-})
 
 // dotenv configuration
 dotenv.config();
@@ -55,10 +16,6 @@ app.use(cors({
     origin: '*', // Replace with your frontend domain
     credentials: true
   }));
-
-io.on("connection",(socket) => {
-    // console.log(socket.id);
-})
 
 
 // Universal constant
@@ -102,6 +59,6 @@ app.use('/post',postRoute);
 
 
 
-server.listen(4000,() => {
+app.listen(4000,() => {
     console.log("Database connected at port "+PORT);
 });

@@ -40,7 +40,7 @@ const Navbar = () => {
               <NavLink className='lil'  to="/profile">profile</NavLink>
             </li>
             <li>
-              <NavLink  className='lil' to="/contact">Contact </NavLink>
+              <NavLink  className='lil' to="/call">Calls </NavLink>
             </li>
           </ul>
         </div>

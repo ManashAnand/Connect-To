@@ -6,7 +6,11 @@ const UserSchema = mongoose.Schema({
     password: String,
     college: String,
     cover: String,
-    alumni: Boolean
+    alumni: Boolean,
+    videoUid: {
+        type: String,
+        default:""
+    }
 },
 {
     timestamps: true,

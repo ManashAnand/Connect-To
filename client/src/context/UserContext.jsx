@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const userAuth = () => useContext(UserContext);
 
 const UserContextProvider = ({children}) => {
-    const [userInfo,setUserInfo] = useState({});    
+    const [userInfo,setUserInfo] = useState({});        
     const [showLogin,setShowLogin] = useState(false);
 
     useEffect(() => {

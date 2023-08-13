@@ -53,6 +53,7 @@ const profileData = async (req,res) => {
     try {
         const id = req.params.id;
         // console.log(id);
+       
         const userDoc = await UserModel.findById(id);
         res.send(userDoc);
         
